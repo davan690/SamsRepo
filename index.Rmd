@@ -1,0 +1,72 @@
+---
+title: "Demo literature submission"
+author: "Anthony Davidson"
+date: "21/09/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Swift parrot ecology
+
+## Replication and psuedo-replication
+
+Trees dataset: 50m from nest trees
+
+Hollow data = 1x nest hole +
+              1x rand hole
+              
+              
+              
+              
+Treelevel data
+
+- nest, health
+
+
+
+
+
+```{r}
+#data
+# source(here::here("data/hollow_data_wrangled.xlsx", sheet = 1))
+
+
+```
+
+
+
+
+
+## Data and analysis
+
+Catagorical vs continuous
+
+```{r}
+#nested trees 
+nest <- factor(dat$BirdPresence)
+dbh <- as.numeric(dat$treeDiameter)
+
+mod <- lm(nest~dbh)
+# anova(summary(mod))
+
+
+
+```
+
+Continous vs continous data
+
+```{r}
+
+
+
+```
+
+
+
+
+
+
+
