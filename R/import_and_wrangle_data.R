@@ -13,7 +13,13 @@ var_names <- read_excel(here::here("hollow_data_wrangled.xlsx"), sheet = 2)
 table(dat$birdPresent)
 
 
+dat <- read_xlsx(here::here("SamsRepo/data/tree_data_wrangled.xlsx"),sheet = 1) %>%
+  mutate(BirdPresence = factor(BirdPresence),
+         spp = factor(spp))
 
+# kableExtra::kable(glimpse(dat))
+
+varnames_dat <- read_xlsx(here::here("SamsRepo/data/tree_data_wrangled.xlsx"),sheet = 2)
 
 
 
