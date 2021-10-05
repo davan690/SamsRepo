@@ -1,0 +1,37 @@
+---
+title: "Proof name here"
+author: "You, Anthony Davidson and many others"
+date: "template"
+output: html_document
+---
+
+# Overview [proofname]
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## [proofname] constant
+
+```{r pressure, echo=FALSE}
+
+# function(){
+#  exp(pi)
+# plot(pressure) 
+# }
+
+```
+
+$$1 = f(x),f(y), $$
+## [proofname] application
+
+```{r}
+#comming,....
+```
+
+## [proofname] references
+
+```{r}
+#bib file
+```
+

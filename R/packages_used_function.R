@@ -1,3 +1,17 @@
+#install function to make sure RStudio is up to speed
+
+library(tidyverse)
+library(ggplot2)
+library(effects)
+library(lsmeans)
+library(scales)
+library(ggiraphExtra)
+library(devtools)
+library(car)
+library(ggeffects)
+library(readr)
+library(readxl)
+
 # Installation of required packages
 packages <- c("MASS", "car", "readxl", "rgl", "rmarkdown", "nortest", 
               "latex2exp", "pca3d", "ISLR", "pls", "corrplot", "glmnet",

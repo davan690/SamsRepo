@@ -7,66 +7,176 @@ output: html_document
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+here::dr_here()
 ```
 
 # Swift parrot ecology
 
-## Replication and psuedo-replication
+This is a great species for this work as it includes challenging aspects of both observations and processes and how these play out in model space. 
+
+## Background
+
+There are several previous publications that test the following associations...
+
+```{r}
+#read_lit_db
+```
+
+## Conceptial model
+
+
+
+
+## Challenges
+
+Continous vs discrete data
+
+```{r}
+
+
+
+```
+
+
+Precision vs. Accuracy
+
+
+
+Abundance vs. Occupancy
+
+
+
+
+Replication and psuedo-replication
+
+
+There are the replicates? Well it depends on the scale you are interested in......
+
+Because of the following aspects of statistics and mathematical projection.
+
+
+## Methods
+
+```{r}
+#data
+# source("./data/hollow_data_wrangled.xlsx", sheet = 1)
+# simulate
+# Generates 50 points from a N(0, 1): predictor and error
+set.seed(34567)
+x <- rnorm(n = 50)
+eps <- rnorm(n = 50)
+
+# Responses
+yLin <- -0.5 + 1.5 * x + eps
+yQua <- -0.5 + 1.5 * x^2 + eps
+yExp <- -0.5 + 1.5 * 2^x + eps
+
+# Data
+leastSquares <- data.frame(x = x, yLin = yLin, yQua = yQua, yExp = yExp)
+
+```
+
+
+## Data and analysis
 
 Trees dataset: 50m from nest trees
 
 Hollow data = 1x nest hole +
               1x rand hole
               
-              
-              
-              
 Treelevel data
 
 - nest, health
 
-
-
-
-
 ```{r}
-#data
-# source(here::here("data/hollow_data_wrangled.xlsx", sheet = 1))
+
+# paperscriptcopy
+#AnthonyDavidson
+#21092021
+
+library(tidyverse)
+library(ggplot2)
+library(effects)
+library(lsmeans)
+library(scales)
+library(ggiraphExtra)
+library(devtools)
+library(car)
+library(ggeffects)
+library(readr)
+library(readxl)
+
+hollows<-read_excel("data/hollow_data_wrangled.xlsx")
+trees<-read_excel("data/tree_data_wrangled.xlsx")
+
+trees$health<-factor(trees$healthScale)
+
+trees$healthScale<-factor(trees$healthScale)
+#summaries
+str(trees)
+summary(trees)
 
 
-```
+str(hollows)
+summary(hollows)
 
-
-
-
-
-## Data and analysis
-
-Catagorical vs continuous
-
-```{r}
 #nested trees 
-nest <- factor(dat$BirdPresence)
-dbh <- as.numeric(dat$treeDiameter)
+nest <- factor(hollows$BirdPresence)
+dbh <- as.numeric(hollows$treeDiameter)
 
-mod <- lm(nest~dbh)
+# mod <- glm(nest~dbh)
 # anova(summary(mod))
 
 
 
 ```
 
-Continous vs continous data
+## Error modelling ... chancing variance
 
-```{r}
+Catagorical vs continuous
 
+### Import and wrangle data
 
+```{r results = "asis"}
+source("R/import_and_wrangle_data.R")
 
 ```
 
+### Method
+
+```{r}
+
+```
+
+### Results
+
+
+```{r}
+####QUESTION 1: IS THERE A DIFFERENCE IN THE NUMBER OF ENTRANCES DETECTED FROM THE GROUND VS. CLIMBING?####
+
+#model choices....
 
 
 
+#model selection
 
+# errorn<-glm(BirdPresence~1,family = poisson(), data = trees)
+# error1<-glm(groundcount~climbentry*DBH,family = poisson(), data = trees)#interaction is signfificant
+# error2<-glm(groundcount~climbentry+DBH,family = poisson(), data = trees)
+# error3<-glm(groundcount~climbentry,family = poisson(), data = trees)
+# error4<-glm(groundcount~DBH,family = poisson(), data = trees)
+# AIC(errorn,error1,error2,error3,error4)
+# ##        df      AIC
+# ## errorn  1 422.0013
+# ## error1  4 319.0683
+# ## error2  3 322.4391
+# ## error3  2 324.9321
+# ## error4  2 404.3212
+# 322.4391-319.0683
+# ## [1] 3.3708
+# #we select model 'error1'
+# summary(error1) #all terms significant
+
+```
 
 

@@ -37,13 +37,13 @@ ggplot(dat) +
   # geom_density(aes(x = hollows), stat = "count")
 
 
-dat <- read_xlsx(here::here("SamsRepo/data/tree_data_wrangled.xlsx"),sheet = 1) %>%
+dat <- read_xlsx(here::here("data/tree_data_wrangled.xlsx"),sheet = 1) %>%
   mutate(BirdPresence = factor(BirdPresence),
          spp = factor(spp))
 
 # kableExtra::kable(glimpse(dat))
 
-varnames_dat <- read_xlsx(here::here("SamsRepo/data/tree_data_wrangled.xlsx"),sheet = 2)
+varnames_dat <- read_xlsx(here::here("data/tree_data_wrangled.xlsx"),sheet = 2)
 
 
 
