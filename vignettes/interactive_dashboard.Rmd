@@ -1,0 +1,105 @@
+---
+title: "Demo info"
+output:
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+library(tidyverse)
+library(readxl)
+library(here) 
+library(kableExtra)
+
+#source functions?
+```
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Datasets
+
+Tree Diameter
+
+```{r echo = FALSE,message=FALSE, warning=FALSE}
+dat <- read_xlsx(here::here("SamsRepo/data/tree_data_wrangled.xlsx"),sheet = 1) %>%
+          mutate(BirdPresence = factor(BirdPresence),
+                 spp = factor(spp))
+varnames_dat <- read_xlsx(here::here("SamsRepo/data/tree_data_wrangled.xlsx"),sheet = 2)
+
+#balanced hollow
+dat_holl <- read_xlsx(here::here("SamsRepo/data/hollow_data_wrangled.xlsx"),sheet = 1)
+varnames_holl <- read_xlsx(here::here("SamsRepo/data/hollow_data_wrangled.xlsx"),sheet = 2)
+
+```
+
+
+
+```{r echo = FALSE,message=FALSE, warning=FALSE}
+p1 <- ggplot(data=dat) +
+  geom_histogram(aes(treeDiameter, fill = BirdPresence), position = "dodge") +
+  facet_grid(BirdPresence~spp) + 
+  coord_cartesian()
+  p1
+```
+
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Hollow data
+
+```{r}
+kableExtra::kable(glimpse(dat_holl))
+```
+
+
+
+### Continuous variables
+
+A continous varible is estimated with a mean and sd and contains values that include all real numbers. The first data set has the following arrangement of continous and discrete variables.
+
+#### Normal
+
+
+
+#### Possion
+
+- hollowNumber
+- hollowEntrances
+
+#### Discrete
+
+- BirdPresence
+- spp
+
+
+```{r}
+library(DT)
+DT::datatable(dat)
+```
+
+```{r eval = FALSE}
+library(tidyverse)
+p1 <- dat %>% 
+  ggplot(mapping = aes(treeDiameter, group = BirdPresence)) +
+  geom_density(aes(treeDiameter)) +
+  facet_grid(spp~BirdPresence)
+
+p2 <- dat %>% 
+  ggplot(mapping = aes(BirdPresence)) +
+  geom_point() +
+  coord_cartesian()
+
+p3 <- dat %>% 
+  ggplot(mapping = aes(BirdPresence)) +
+  geom_bar() +
+  coord_flip()
+
+gridExtra::grid.arrange(p1,p2,p3)
+# barplot_test <- plot(x = dat$healthScale, y = dat$BirdPresence)
+# str(dat$BirdPresence)
+```
+

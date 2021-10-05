@@ -1,0 +1,384 @@
+---
+title: "Understanding differences between continuous and discrete distributions for statistical models in ENVI200+ ANU course"
+runtitle: "Understanding Simpsons Paradox"
+documentclass: frontiersSCNS  # or frontiersHLTH, or frontiersFPHY
+author:
+  - name: Samual Smeal
+    affiliation: '1'
+    etal:  Smeal 
+  - name: Anthony Davidson
+    affiliation: '2'
+  - name: Course Lecture (coming)
+    affiliation: '1,3'
+    email: anthony.davidson@anu.edu.au # Indicates corresponding Author
+    institution: Australian National University
+    street: Civic
+    city: Canberra
+    state: ACT # only USA, Australia, Canada
+    zip: 2061
+    country: Australia
+affiliation:
+  - id: '1'
+    department: School of Biology, ANU
+    institution: Institution X
+    city: City X
+    state: State XX # only USA, Australia, Canada
+    country: Country X
+  - id: '2' 
+    department: Department X
+    institution: Institution X
+    city: City X
+    state: State XX # only USA, Australia, Canada
+    country: Country X
+output: rticles::frontiers_article
+csl: frontiers.csl
+bibliography: test.bib
+---
+
+\begin{abstract}
+
+Abstract length and content varies depending on article type. Refer to \url{http://www.frontiersin.org/about/AuthorGuidelines} for abstract requirement and length according to article type.
+
+%All article types: you may provide up to 8 keywords; at least 5 are mandatory.
+
+Understanding the population dynamics of a population can be vital for understanding the projection of these populations to different states of abundance and growth. 
+
+"*Polytelis swainsonii* – Superb Parrot are a non-excavating species and rely on the presence of tree hollows in a given area to make nests. The species are in what is known to be an extinction debt and without the recruitment of new trees amongst the landscape, the superb parrot will be in an expected decline. To increase the chances of incorporating land management practices, key characteristics based on nest selection of the Superb Parrot will be identified using two main methods including single rope climbing techniques and ground based observational methods. I then used this data to find whether tree physiognomy can be used to predict the number of active nests and the presence of hollows. The Study site is based in surrounding Canberra, a key site to mimic a landscape with little to no recruitment of new trees. Highlighting current and future obstacles regarding the management of hollow bearing woodlands seen across most superb parrot nesting populations 
+I found that climbing data is more accurate compared to ground-based methods in counting tree hollows and tree hollow nests. On average climbing data increased the ground count by 32%  and nests found in this method found 2.1x the amount of ground based methods. 
+ (insert data here maybe) Super  parrots prefer a tree DBH  on average 114cm to hollows without a nest 102cm. 
+ 
+Using a double sampling technique paired with a critical ratio, climbing and ground based results in ongoing studies can further contribute to this area of study by replicating the process used in this report.  Citizen science projects can benefit in the future by focusing on the key indicators highlighted and thus increase the effectiveness across future measurements. 
+citizen science projects can measurements can be calibrated using double sampling techniques to correct data derived from future citizen science projects, savings costs overall and improving management studies by increasing the observability of simple measurements such as tree DBH"
+
+\tiny
+ \keyFont{ \section{Keywords:} Biology, Statistics, Ecology, Simpsons paradox} 
+
+\end{abstract}
+
+
+# Introduction {-}
+
+Individual biases in the scientific endenvour is a fundamental task of any researcher. This publication links the open-sources tools and templates that allow to for the production of typed set articles.
+
+Here is an example of a simple journal submission template for the journal "Frontiers in Science" and the association information needed [@Neuro2013]. As demonstrated in @Gene2012, citations can
+also be automatically reference. Multiple references are separated by semicolons [@Neuro2013; @Neurobot2013]. I have used this template to generate a simple description and information about a important issue when comparing means of two samples.
+
+Simpsons paradox [@simpsonlink2021] is a phenomenon where the true relationship between between two groups is missed due to a underlying, interactions between an unmeasured variable and the two groups being investigated.
+
+<!-- Simpson’s paradox (Simpson, E. H. (1951). The interpretation of interaction in contingency tables. Journal of the Royal -->
+<!-- Statistical Society, Series B, 30, 238–241.) occurs in a three-way table, [A, B, C], when the marginal association between two -->
+<!-- variables, A, B collapsing over C differs in direction from the partial association $ A, B|C = ck $ at the separate levels of C. -->
+<!-- Strictly speaking, Simpson’s paradox would require that for all departments separately the odds ratio $ \theta < 1 $ (which occurs -->
+<!-- for Departments A, B, D, and F in Figure 4.6) while in the aggregate data $ \theta  > 1 $. -->
+
+[@simpson1951interpretation]
+
+This can occur and not be know but often it happens that later research can identify these paradoxical relationships with additional data. The study set up for this experiment has the potential for this to occur, particularly because of the modification and manipulation of the original data.
+
+# Methods {-}
+
+This publication demostrates the ability to produce draft publications from a simple assignment. General structure of a scientific article follows the structure defined by the journal.
+
+## Study area and species 
+
+The data collected was from North Canberra in two sites, the outskirts of Throsby just outside of mulligans flat reserve *-35.172074, 149.165799* and south west of Belconnen *-35.241217, 149.004370* where the superb parrot is known to breed in colonies on the outskirts of Canberra. The two study sites are roughly 15km apart on either side of suburban Canberra and can be considered independent of each other with localised climate history and also dependent on preference due to the ability of the superb parrots metapopulation not being limited to the distance between the study sites. 
+The study sites are heavily grazed open woodlands used for mostly cattle. The trees are mostly all aged hollow bearing little to no recruitment of young trees sue to the current land uses. For this study sites measurements were derived by only two tree species, Eucalytpus blakleyi (Blakely's red gum) and Eucalyptus rosii (Scribbly Gum)"
+
+```{r}
+library(ggplot2)
+x <- c("-35.172074", "-35.241217")
+y <- c("149.165799", "149.004370")
+
+ggplot() + 
+  geom_point(aes(x = x, y = y)) #+ 
+  # geom_map()
+```
+
+
+```{r setup, include=FALSE, warning=FALSE, message=FALSE}
+library(flexdashboard)
+library(tidyverse)
+library(readxl)
+library(here)
+library(DT)
+library(kableExtra)
+#data
+dat <- read_xlsx(here::here("SamsRepo/data/tree_data_wrangled.xlsx"),sheet = 1) %>%
+          mutate(BirdPresence = factor(BirdPresence),
+                 spp = factor(spp))
+# glimpse(dat)
+
+varnames_dat <- read_xlsx(here::here("SamsRepo/data/tree_data_wrangled.xlsx"),sheet = 2)
+```
+
+### Continuous variables
+
+A continuous variable is estimated with a mean and SD and contains values that include all real numbers. The first data set has the following arrangement of continuous and discrete variables.
+
+```{r}
+#data
+dat_hol <- read_xlsx(here::here("SamsRepo/data/hollow_data_wrangled.xlsx"),sheet = 1) %>%
+mutate(BirdPresence = factor(birdPresent),
+spp = factor('tree species'))
+
+kableExtra::kable(glimpse(head(dat_hol)))
+
+varnames_hol <- read_xlsx(here::here("SamsRepo/data/hollow_data_wrangled.xlsx"),sheet = 2)
+
+names(dat_hol)[1:7] <- varnames_hol$shortname
+
+dat_hol <- dat_hol[,1:7]
+  
+# dat_hol1 <- dat_hol %>%
+              #split and merge
+dat_hol %>% 
+  ggplot(mapping = aes(x = hollows, col = birdpresent, fill = birdpresent)) +
+  # geom_histogram(position = "dodge", stat = "count") +
+  geom_density() + 
+  facet_grid("floorDia"~spp) + 
+  coord_cartesian() + 
+  ggtitle("Density of the presence of active and non active nest hollows compared to number of hollows")
+```
+
+#### Floor diameter
+
+```{r}
+names(dat_hol)
+
+dat_hol %>% 
+  ggplot(mapping = aes(x = minDiaEntrance, fill = birdpresent)) +
+  # geom_histogram(position = "dodge", stat = "count") +
+  geom_density(bins = 100) + 
+  facet_grid(spp~"floorDia") + #
+  coord_cartesian() + 
+  ggtitle("Density of the presence of active and non active nest hollows compared to number of hollows")
+```
+
+
+#### Normal
+
+```{r}
+names(dat)
+glimpse(dat)
+dat1 <- dat[,2,5]
+# plot(lm(select(dat, treeDiameter, healthScale), subset = dat$BirdPresence))
+
+varNames <- names(dat)
+varLength <- length(names(dat))
+# for(i in 1:varLength) {
+#   i = 2
+#   mod <- lm(select(dat, varNames[i]))
+#   
+#   ggplot(dat) + 
+#     geom_histogram(aes(x = dat$varNames[i]), stat = "count")
+# }
+
+```
+
+- Tree Diameter
+
+```{r fig.align="center"}
+
+dat %>% 
+  ggplot(mapping = aes(healthScale, fill = BirdPresence)) +
+  geom_histogram(position = "dodge", bins = 4) +
+  geom_density(stat = "count") + 
+  facet_grid(BirdPresence~spp) + 
+  coord_cartesian()
+```
+
+
+```{r eval = FALSE}
+#random health scale?
+names(dat)
+
+rand_scale <- filter(dat, BirdPresence == "no")
+
+
+tallyCounts <- dat %>%
+                group_by(BirdPresence) %>%
+                  summarise(treeDiameter = mean(treeDiameter),
+                            healthScale = mean(healthScale),
+                            hollowEntrances = mean(hollowEntrances),
+                            hollowNumber = mean(hollowNumber),
+                            Random = mean(as.numeric(BirdPresence)), 
+                            spp = mean(as.numeric(spp)))
+
+tallyCounts
+
+y <- dat$BirdPresence
+x <- dat$healthScale
+
+datNull <- data.frame(y,x)
+#anova in R
+#is just glm then avo of output
+
+mod <- glm(y ~x, data = datNull, family = "binomial")
+summary(mod)
+anovaR <- anova(mod)
+
+health_scale
+```
+
+#### Poisson
+
+- hollowNumber
+- hollowEntrances
+
+```{r}
+poisRand10 <- rpois(10, 0.5) #lambda is growth rate here
+plot(density(poisRand10))
+
+poisRand20 <- rpois(20, 0.5) #lambda is growth rate here
+plot(density(poisRand10))
+
+poisRand30 <- rpois(30, 0.5) #lambda is growth rate here
+plot(density(poisRand10))
+
+poisRand100 <- rpois(100, 0.5) #lambda is growth rate here
+plot(density(poisRand100))
+
+```
+
+
+
+#### Discrete
+
+- BirdPresence
+- spp
+
+
+```{r}
+# DT::datatable(dat)
+kableExtra::kable(head(dat))
+```
+
+
+# Results {-}
+
+<!-- Comments should be HTML-style comments -->
+
+```{r}
+p1 <- dat %>% 
+  ggplot(mapping = aes(treeDiameter, group = BirdPresence)) +
+  geom_density() +
+  facet_grid(spp~BirdPresence)
+
+p2 <- dat %>% 
+  ggplot(mapping = aes(spp)) +
+  geom_histogram(stat = "count") +
+  coord_cartesian()
+
+p3 <- dat %>% 
+  ggplot(mapping = aes(BirdPresence)) +
+  geom_bar() +
+  coord_flip()
+
+gridExtra::grid.arrange(p1,p2,p3)
+# barplot_test <- plot(x = dat$healthScale, y = dat$BirdPresence)
+# str(dat$BirdPresence)
+```
+
+## Hollow data {-}
+
+coming???
+
+```{r}
+
+#balanced hollow
+dat_holl <- read_xlsx(here::here("SamsRepo/data/hollow_data_wrangled.xlsx"),sheet = 1)
+varnames_holl <- read_xlsx(here::here("SamsRepo/data/hollow_data_wrangled.xlsx"),sheet = 2)
+```
+
+Frontiers requires figures to be submitted individually, in the same order as
+they are referred to in the manuscript. Figures will then be automatically
+embedded at the bottom of the submitted manuscript. Kindly ensure that each
+table and figure is mentioned in the text and in numerical order. Permission
+must be obtained for use of copyrighted material from other sources (including
+the web). Please note that it is compulsory to follow figure instructions.
+Figures which are not according to the guidelines will cause substantial delay
+during the production process.
+
+# Discussion
+
+The results of this publication highlight the ability for any undergraduate course to include the relevent documentation for the submission of research articles from written text from a word document from an RMarkdown veriation of this information.
+
+# Disclosure/Conflict-of-Interest Statement {-}
+
+<!--  
+Frontiers follows the recommendations by the International Committee of Medical
+Journal Editors (http://www.icmje.org/ethical_4conflicts.html) which require
+that all financial, commercial or other relationships that might be perceived by
+the academic community as representing a potential conflict of interest must be
+disclosed. If no such relationship exists, authors will be asked to declare that
+the research was conducted in the absence of any commercial or financial
+relationships that could be construed as a potential conflict of interest. When
+disclosing the potential conflict of interest, the authors need to address the
+following points:
+
+ - Did you or your institution at any time receive payment or services from a
+   third party for any aspect of the submitted work?
+ - Please declare financial relationships with entities that could be perceived
+   to influence, or that give the appearance of potentially influencing, what
+   you wrote in the submitted work.
+ - Please declare patents and copyrights, whether pending, issued, licensed
+   and/or receiving royalties relevant to the work.
+ - Please state other relationships or activities that readers could perceive to
+   have influenced, or that give the appearance of potentially influencing, what
+   you wrote in the submitted work.
+ -->
+
+The authors declare that the research was conducted in the absence of any
+commercial or financial relationships that could be construed as a potential
+conflict of interest.
+
+# Author Contributions {-}
+
+<!--  
+
+When determining authorship the following criteria should be observed:
+
+ - Substantial contributions to the conception or design of the work; or the
+   acquisition, analysis, or interpretation of data for the work; AND
+ - Drafting the work or revising it critically for important intellectual
+   content; AND
+ - Final approval of the version to be published ; AND
+ - Agreement to be accountable for all aspects of the work in ensuring that
+   questions related to the accuracy or integrity of any part of the work are
+   appropriately investigated and resolved.
+
+Contributors who meet fewer than all 4 of the above criteria for authorship
+should not be listed as authors, but they should be acknowledged.
+(http://www.icmje.org/roles_a.html)
+
+-->
+
+The statement about the authors and contributors can be up to several sentences
+long, describing the tasks of individual authors referred to by their initials
+and should be included at the end of the manuscript before the References
+section.
+
+
+# Acknowledgments {-}
+
+Funding:
+
+# Supplemental Data 
+
+Supplementary Material should be uploaded separately on submission, if there are Supplementary Figures, please include the caption in the same file as the figure. LaTeX Supplementary Material templates can be found in the Frontiers
+LaTeX folder
+
+# References
+
+A reference list should be automatically created here. However it won't. Pandoc will place the list of references at the end of the document instead. There are 
+no convenient solution for now to force Pandoc to do otherwise. The easiest way to get around this problem is to edit the LaTeX file created by Pandoc before 
+compiling it again using the traditional LaTeX commands.
+
+# Figures {-}
+
+```{r, Figure-1, ref.label = "graph", results = "hide", echo = FALSE, message = FALSE, fig.height=4, fig.width=4, fig.align='center', fig.cap='Figure caption', out.width = "85mm", out.height = "85mm"}
+# You can also refer to code chunks from above to place figures at the bottom.
+plot(density(poisRand100))
+
+```
+

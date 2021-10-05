@@ -1,0 +1,184 @@
+---
+title: "Gelfond's constant"
+author: "Anthony Davidson and many others"
+date: "27/09/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Gelfond's constant
+
+```{r pressure, echo=FALSE}
+
+# function(){
+#  exp(pi)
+# plot(pressure) 
+# }
+
+```
+
+Gelfond's constant was named after Aleksandr Gelfond, Like both $\mvar \given | \e$ and $\pi$, this constant is a transcendental number. This was first established by Gelfond and may now be considered as an application of the [[Gelfond–Schneider theorem]], noting that ...
+
+<!-- is {{math|''e''{{sup|''π''}}}}, that is, {{mvar|[[e (mathematical constant)|e]]}} raised to the [[exponentiation|power]]  [[Pi|{{pi}}]]. Like both {{mvar|e}} and {{pi}}, this constant is a [[transcendental number]]. This was first established by Gelfond and may now be considered as an application of the [[Gelfond–Schneider theorem]], noting that -->
+
+$$e^\pi = (e^{i\pi})^{-i} = (-1)^{-i},$$
+
+<ref>{{cite journal|author=Nesterenko, Y|author-link=Yuri Valentinovich Nesterenko|title=Modular Functions and Transcendence Problems|journal=[[Comptes rendus de l'Académie des sciences|Comptes Rendus de l'Académie des Sciences, Série I]]|volume=322|pages=909–914|year=1996|issue=10| zbl=0859.11047 }}</ref>
+
+<!-- where {{mvar|i}} is the [[imaginary unit]]. Since {{math|&minus;''i''}} is algebraic but not rational, {{math|''e''{{sup|''π''}}}} is transcendental. The constant was mentioned in [[Hilbert's seventh problem]].<ref name=tijdeman>{{cite book | editor=Felix E. Browder | editor-link=Felix Browder | title=Mathematical Developments Arising from Hilbert Problems | series=[[Proceedings of Symposia in Pure Mathematics]] | volume=XXVIII.1 | year=1976 | publisher=[[American Mathematical Society]] | isbn=0-8218-1428-1 | first=Robert | last=Tijdeman | author-link=Robert Tijdeman | chapter=On the Gel'fond–Baker method and its applications | pages=241–268 | zbl=0341.10026 }}</ref> A related constant is {{math|2{{sup|{{sqrt|2}}}}}}, known as the [[Gelfond–Schneider constant]]. The related value {{pi}}&nbsp;+&nbsp;{{math|''e''{{sup|''π''}}}} is also irrational.< -->
+
+<!-- ==Numerical value== -->
+<!-- The decimal expansion of Gelfond's constant begins -->
+
+<!-- :<math>e^\pi = </math> {{val|23.1406926327792690057290863679485473802661062426002119934450464095243423506904527835169719970675492196}}... &nbsp; {{OEIS2C|id=A039661}} -->
+
+<!-- === Construction === -->
+<!-- If one defines {{math|''k''{{sub|0}} {{=}} {{sfrac|1|{{sqrt|2}}}}}} and -->
+
+<!-- :<math>k_{n+1} = \frac{1 - \sqrt{1 - k_n^2}}{1 + \sqrt{1 - k_n^2}}</math> -->
+
+<!-- for {{math|''n'' > 0}}, then the sequence<ref>{{cite book|author1-link=Jonathan Borwein | last1=Borwein | first1=J. | last2=Bailey | first2=D. | title=Mathematics by Experiment: Plausible Reasoning in the 21st Century|url=https://archive.org/details/mathematicsbyexp00borw |url-access=limited |place=Wellesley, MA|publisher=A K Peters|year=2004|page=[https://archive.org/details/mathematicsbyexp00borw/page/n150 137] | isbn=1-56881-211-6 | zbl=1083.00001 }}</ref> -->
+
+<!-- :<math>(4/k_{n+1})^{2^{-n}}</math> -->
+
+<!-- converges rapidly to {{math|''e''{{sup|''π''}}}}. -->
+
+<!-- == Continued fraction expansion == -->
+<!-- :<math>e^{\pi} = 23+ -->
+<!-- \cfrac{1} -->
+<!--    {7+\cfrac{1} -->
+<!--       {9 +\cfrac{1} -->
+<!--          {3+\cfrac{1} -->
+<!--             {1+\cfrac{1} -->
+<!--                {1 +\cfrac{1} -->
+<!--             {591+\cfrac{1} -->
+<!--             {2+\cfrac{1} -->
+<!--             {9+\cfrac{1} -->
+<!--             {1+\cfrac{1} -->
+<!--             {2+\cfrac{1} -->
+<!--                {\ddots} -->
+<!--                } -->
+
+<!--             } -->
+
+<!--             } -->
+
+<!--             } -->
+<!--                   } -->
+<!--                } -->
+<!--             } -->
+<!--          } -->
+<!--       } -->
+<!--    } -->
+<!-- </math> -->
+
+<!-- This is based on the digits for the [[Continued fraction|simple continued fraction]]: -->
+
+<!-- :<math>e^{\pi} = [23; 7, 9, 3, 1, 1, 591, 2, 9, 1, 2, 34, 1, 16, 1, 30, 1, 1, 4, 1, 2, 108, 2, 2, 1, 3, 1, 7, 1, 2, 2, 2, 1, 2, 3, 2, 166, 1, 2, 1, 4, 8, 10, 1, 1, 7, 1, 2, 3, 566, 1, 2, 3, 3, 1, 20, 1, 2, 19, 1, 3, 2, 1, 2, 13, 2, 2, 11, ...] -->
+<!-- </math> -->
+
+<!-- As given by the integer sequence [[oeis:A058287|A058287]]. -->
+
+<!-- ==Geometric property== -->
+<!-- The [[Volume of an n-ball|volume of the ''n''-dimensional ball]] (or [[n-ball|''n''-ball]]), is given by -->
+
+<!-- :<math>V_n = \frac{\pi^\frac{n}{2}R^n}{\Gamma\left(\frac{n}{2} + 1\right)},</math> -->
+
+<!-- where {{mvar|R}} is its radius, and {{math|Γ}} is the [[gamma function]]. Any even-dimensional ball has volume -->
+
+<!-- :<math>V_{2n} = \frac{\pi^n}{n!}R^{2n},</math> -->
+
+<!-- and, summing up all the unit-ball ({{math|''R'' {{=}} 1}}) volumes of even-dimension gives<ref>Connolly, Francis. University of Notre Dame{{full citation needed|date=November 2012}}</ref> -->
+
+<!-- :<math>\sum_{n=0}^\infty V_{2n} (R = 1) = e^\pi.</math> -->
+
+<!-- == Similar or related constants == -->
+
+<!-- === Ramanujan's constant === -->
+<!-- :<math>e^{\pi{\sqrt{163}}} = (\text{Gelfond's constant})^{\sqrt{163}}</math> -->
+
+<!-- This is known as Ramanujan's constant. It is an application of [[Heegner number]]s, where 163 is the Heegner number in question. -->
+
+<!-- Similar to {{math|''e''{{sup|''π''}} - ''π''}}, {{math|''e''{{sup|''π''{{sqrt|163}}}}}} is very close to an integer: -->
+
+<!-- :<math>e^{\pi \sqrt{163}} = </math> {{val|262537412640768743.9999999999992500725971981856888793538563373369908627075374103782106479101186073129}}... <math> \approx 640\,320^3+744</math> -->
+
+<!-- As it was the Indian mathematician [[Srinivasa Ramanujan]] who first predicted this almost-integer number, it has been named after him, though the number was first discovered by the French mathematician [[Charles Hermite]] in 1859. -->
+
+<!-- The coincidental closeness, to within 0.000 000 000 000 75 of the number {{math|640320{{sup|3}} + 744}} is explained by [[complex multiplication]] and the [[Q-expansion|''q''-expansion]] of the [[j-invariant]], specifically: -->
+
+<!-- :<math>j((1+\sqrt{-163})/2)=(-640\,320)^3</math> -->
+
+<!-- and, -->
+
+<!-- :<math>(-640\,320)^3=-e^{\pi \sqrt{163}}+744+O\left(e^{-\pi \sqrt{163}}\right)</math> -->
+
+<!-- where {{math|''O''(''e''{{sup|-''π''{{sqrt|163}}}})}} is the error term, -->
+
+<!-- :<math>{\displaystyle O\left(e^{-\pi {\sqrt {163}}}\right) = -196\,884/e^{\pi {\sqrt {163}}}\approx -196\,884/(640\,320^{3}+744)\approx -0.000\,000\,000\,000\,75}</math> -->
+
+<!-- which explains why {{math|''e''{{sup|''π''{{sqrt|163}}}}}} is 0.000 000 000 000 75 below {{math|640320{{sup|3}} + 744}}. -->
+
+<!-- (For more detail on this proof, consult the article on [[Heegner number]]s.) -->
+
+<!-- === The number {{math|''e''{{sup|''π''}} - ''π''}} === -->
+<!-- The decimal expansion of {{math|''e''{{sup|''π''}} - ''π''}} is given by [[oeis:A018938|A018938]]: -->
+
+<!-- :<math>e^{\pi} - \pi = </math> {{val|19.9990999791894757672664429846690444960689368432251061724701018172165259444042437848889371717254321516}}... -->
+
+<!-- Despite this being nearly the integer 20, no explanation has been given for this fact and it is believed to be a [[mathematical coincidence]]. -->
+
+<!-- === The number {{math|''π''{{sup|''e''}}}} === -->
+<!-- The decimal expansion of {{math|''π''{{sup|''e''}}}} is given by [[oeis:A059850|A059850]]: -->
+
+<!-- :<math> -->
+<!-- \pi^{e} = </math> {{val|22.4591577183610454734271522045437350275893151339966922492030025540669260403991179123185197527271430315}}... -->
+
+<!-- It is not known whether or not this number is transcendental. Note that, by [[Gelfond–Schneider theorem|Gelfond-Schneider theorem]], we can only infer definitively that {{math|''a''{{sup|''b''}}}} is transcendental if {{mvar|a}} is algebraic and {{mvar|b}} is not rational ({{mvar|a}} and {{mvar|b}} are both considered [[complex number]]s, also {{math|''a'' ≠ 0}}, {{math|''a'' ≠ 1}}). -->
+
+<!-- In the case of {{math|''e''{{sup|''π''}}}}, we are only able to prove this number transcendental due to properties of complex exponential forms, where {{pi}} is considered the modulus of the complex number {{math|''e''{{sup|''π''}}}}, and the above equivalency given to transform it into {{math|(-1){{sup|-''i''}}}}, allowing the application of Gelfond-Schneider theorem. -->
+
+<!-- {{math|''π''{{sup|''e''}}}} has no such equivalence, and hence, as both {{pi}} and {{mvar|e}} are transcendental, we can make no conclusion about the transcendence of {{math|''π''{{sup|''e''}}}}. -->
+
+<!-- === The number {{math|''e''{{sup|''π''}} - ''π''{{sup|''e''}}}} === -->
+<!-- As with {{math|''π''{{sup|''e''}}}}, it is not known whether {{math|''e''{{sup|''π''}} - ''π''{{sup|''e''}}}} is transcendental. Further, no proof exists to show whether or not it is irrational. -->
+
+<!-- The decimal expansion for {{math|''e''{{sup|''π''}} - ''π''{{sup|''e''}}}} is given by [[oeis:A063504|A063504]]: -->
+
+<!-- :<math> -->
+<!-- e^{\pi} - \pi^{e} = </math> {{val|0.6815349144182235323019341634048123526767911086035197442420438554574163102913348711984522443404061881}}... -->
+
+<!-- === The number {{math|''i''{{sup|''i''}}}} === -->
+<!-- :<math>i^{i} = (e^{i\pi/2})^i = e^{-\pi/2} = (e^{\pi})^{-1/2}</math> -->
+
+<!-- The decimal expansion of is given by [[oeis:A049006|A049006]]: -->
+
+<!-- :<math> -->
+<!-- i^{i} = </math> {{val|0.2078795763507619085469556198349787700338778416317696080751358830554198772854821397886002778654260353}}... -->
+
+<!-- Because of the equivalence, we can use Gelfond-Schneider theorem to prove that the reciprocal square root of Gelfond's constant is also transcendental: -->
+
+<!-- {{mvar|i}} is both algebraic (a solution to the polynomial {{math|''x''{{sup|2}} + 1 {{=}} 0}}), and not rational, hence {{math|''i''{{sup|''i''}}}} is transcendental. -->
+
+<!-- == See also == -->
+<!-- * [[Transcendental number]] -->
+<!-- * [[Transcendental number theory]], the study of questions related to transcendental numbers -->
+<!-- * [[Euler's identity]] -->
+<!-- * [[Gelfond–Schneider constant]] -->
+
+<!-- ==References== -->
+<!-- {{Reflist}} -->
+
+<!-- ==Further reading== -->
+<!-- * [[Alan Baker (mathematician)|Alan Baker]] and [[Gisbert Wüstholz]], ''Logarithmic Forms and Diophantine Geometry'', New Mathematical Monographs '''9''', Cambridge University Press, 2007, {{ISBN|978-0-521-88268-2}} -->
+
+<!-- ==External links== -->
+<!-- * [http://mathworld.wolfram.com/GelfondsConstant.html Gelfond's constant at ''MathWorld''] -->
+<!-- * [https://web.archive.org/web/20091027100754/http://www.geocities.com/timeparadox/Muntekim.htm  A new complex power tower identity for Gelfond's constant] -->
+<!-- * [http://mathworld.wolfram.com/AlmostInteger.html Almost Integer at ''MathWorld''] -->
+
+<!-- [[Category:Mathematical constants]] -->
+<!-- [[Category:Real transcendental numbers]] -->

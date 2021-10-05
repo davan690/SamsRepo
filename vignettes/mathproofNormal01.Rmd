@@ -1,0 +1,23 @@
+---
+title: "Gauss's normal distribution and proof"
+author: "Anthony Davidson and many others"
+date: "27/09/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Normal distribution
+
+
+
+```{r pressure, echo=FALSE}
+
+# function(){
+#  exp(pi)
+# plot(pressure) 
+# }
+
+```
