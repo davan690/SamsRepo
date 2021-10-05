@@ -24,14 +24,14 @@ Column {data-width=650}
 Tree Diameter
 
 ```{r echo = FALSE,message=FALSE, warning=FALSE}
-dat <- read_xlsx(here::here("SamsRepo/data/tree_data_wrangled.xlsx"),sheet = 1) %>%
+dat <- read_xlsx(here::here("data/tree_data_wrangled.xlsx"),sheet = 1) %>%
           mutate(BirdPresence = factor(BirdPresence),
                  spp = factor(spp))
-varnames_dat <- read_xlsx(here::here("SamsRepo/data/tree_data_wrangled.xlsx"),sheet = 2)
+varnames_dat <- read_xlsx(here::here("data/tree_data_wrangled.xlsx"),sheet = 2)
 
 #balanced hollow
-dat_holl <- read_xlsx(here::here("SamsRepo/data/hollow_data_wrangled.xlsx"),sheet = 1)
-varnames_holl <- read_xlsx(here::here("SamsRepo/data/hollow_data_wrangled.xlsx"),sheet = 2)
+dat_holl <- read_xlsx(here::here("data/hollow_data_wrangled.xlsx"),sheet = 1)
+varnames_holl <- read_xlsx(here::here("data/hollow_data_wrangled.xlsx"),sheet = 2)
 
 ```
 
