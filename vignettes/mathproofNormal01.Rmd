@@ -11,13 +11,13 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Normal distribution
 
-
-
 ```{r pressure, echo=FALSE}
-
 # function(){
 #  exp(pi)
 # plot(pressure) 
 # }
 
 ```
+
+
+### `t-distribution`

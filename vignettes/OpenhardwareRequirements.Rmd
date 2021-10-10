@@ -1,0 +1,107 @@
+---
+title: "Hardware (Programs and hardware)"
+author: "You, Anthony Davidson and many others"
+date: "template"
+output: html_document
+---
+
+# Overview [proofname]
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(rvest)
+library(tidyverse)
+```
+
+If we generally need the hardware, software and code to achieve any project at a computational level. There are many options to achieve this however, there are costs attached to all these methods.
+
+## Windows, MAC, ubuntu
+
+The operating system or hardware used is important on larger time scales than the current research. For a management approach to be sustainable is for a collection of software, hardware and analysis all need to be reproducible at a much greater time scale.
+
+```{r}
+# ?read_html
+library(xml2)
+
+#wiki t-dist table
+link <-paste0("https://en.wikipedia.org/wiki/",
+              "Student%27s_t-distribution")
+webpage <- read_html(link)
+data <- html_nodes(webpage,".wikitable")
+table<- html_table(data[[1]],header = FALSE)
+datST <- tibble(table)
+  
+kableExtra::kable(table)
+
+# https://en.wikipedia.org/wiki/Ecology
+link <-paste0("https://en.wikipedia.org/wiki/Ecology")
+webpage <- read_html(link)
+data <- html_nodes(webpage,".wikitable")
+table<- html_table(data[[1]],header = FALSE)
+datST <- tibble(table)
+
+```
+
+### Open science movement
+
+```{r}
+link<-paste0("http://www.fas.nus.edu.sg/ecs/",
+             "people/staff.html")
+webpage <- read_html(link)
+data <- html_nodes(webpage,"br+ table td")
+content <-html_text(data)
+content
+```
+
+The open science movement takes this need and addresses with a collection of adapted software and hardware that require no payment for use. These are currently:
+
+- R
+- RStudio
+
+## Current setup `r #Sys.Date()`
+
+```{r}
+#RStudio run
+```
+
+## Details
+
+In more detail here are is the meta-information about my collection of tools to achieve full reproducibility.
+
+One of the tricky things about R but also its power is that it leverages other programs within your hardware enviroment to achive some outcomes of the code. To insure the outcome is reproducible these programs also need to be included. These dependancys come from:
+
+- java
+- git
+- etc
+
+## R constant
+
+```{r pressure, echo=FALSE}
+
+# ?WikipediR
+library(httr)
+library(WikipediR)
+
+r_wikipedia = page_content(language='en', 'wikipedia', page_name = 'R_(programming_language)')
+
+str(r_wikipedia[[1]], 1) # inspect
+
+library(rvest)
+
+r_wikipedia$parse$text$`*` %>% 
+  read_html %>% 
+  html_text %>% 
+  message
+
+# WikipediR::page_content("Mathematical constants")
+
+```
+
+$$1 = f(R),f(WIN), f(power), f(energy)$$
+
+## [proofname] references
+
+```{r}
+bib <- "packages.bib"
+```
+
