@@ -1,0 +1,210 @@
+---
+title: "Suitable indicators for predicting the active nest presence of the Superb Parrot Hollow preference of the Polytelis swainsonii Superp Parrot based on tree and hollow physiognomy."
+---
+
+# Abstract (my notes added): 
+
+*Polytelis swainsonii* – Superb Parrot are a non-excavating species and rely on the presence of tree hollows in a given area to make nests. The species are in what is known to be an extinction debt and without the recruitment of new trees amongst the landscape, the superb parrot will be in an expected decline. To increase the chances of incorporating land management practices, key characteristics based on nest selection of the Superb Parrot will be identified using two main methods including single rope climbing techniques and ground based observational methods. I then used this data to find whether tree physiognomy can be used to predict the number of active nests and the presence of hollows. The Study site is based in surrounding Canberra, a key site to mimic a landscape with little to no recruitment of new trees. Highlighting current and future obstacles regarding the management of hollow bearing woodlands seen across most superb parrot nesting populations 
+I found that climbing data is more accurate compared to ground-based methods in counting tree hollows and tree hollow nests. On average climbing data increased the ground count by 32%  and nests found in this method found 2.1x the amount of ground based methods. 
+
+## Results
+
+ (insert data here maybe) Superb parrots prefer a tree DBH **xx** on average 114cm to hollows without a nest 102cm.
+
+By creating a 
+
+Using a double sampling technique paired with a critical ratio, climbing and ground based results in ongoing studies can further contribute to this area of study by replicating the process used in this report. [SS4]Citizen science projects can benefit in the future by focusing on the key indicators highlighted and thus increase the effectiveness across future measurements. 
+
+## Application
+
+Citizen science projects can measurements can be calibrated using double sampling techniques to correct data derived from future citizen science projects, savings costs overall and improving management studies by increasing the observability of simple measurements such as tree DBH and reducing the overall effort needed when collecting data on habitat avalaibility for the Superb Parrot population in the ACT.
+
+
+
+
+
+
+
+
+
+
+
+Introduction 
+Each successive paragraph narrows the focus, until finally your last paragraph outlines the specifics of why your study is important 
+Many hundreds of species of wildlife worldwide are dependent on tree hollows (cavities) for their survival (Goldingay, 2011), and for the Polytelis swainsonii – Superb Parrots being a non -excavating species, they rely on the presence of naturally made tree hollows to survive and to support future populations. 
+Large and old trees are inconsistent providers of structural elements (e.g. hollows, coarse woody debris), and  are Integral habitat resources for many species, including the superb parrot. (Le Roux et al., 2014)[SS5] 
+Eucalypt species can take up to 120 to 220 years to form and can have grave ecological and management consequences, especially in areas where large old tree removal exceeds new tree recruitment. (Le Roux et al., 2014)
+There can be a significant lag time between detecting a species’ population decline and arresting the lack of hollows through reducing tree mortality and increasing regeneration (Manning et al., 2013) 
+without the recruitment of new generations of trees, the populations of most hollow reliant animals, especially the superb parrot, are expected to decline, as it relies on the constant creation of Hollows due to natural processes. 
+Hollow-bearing trees are declining and limiting populations, creating a serious conservation issue due to the time involved allowing hollows to form. (Manning et al., 2013, p. 1) A contributing factor limiting superb parrots also include the rarity of suitable hollows. (Stojanovic et al., 2021) with Hollow-bearing trees declining, population limitation can be a serious conservation issue. 
+Hollow creation is generally slow, as it is caused by intermittent decay causing processes such as termites, fungi, bacteria, and fire; animals such as woodpeckers found on other continents that speed up these processes are not found in Australia. (Lindenmayer et al., 2011)  A particular problem in addressing hollow limitation is the long time that hollows take to form. (Manning et al., 2013, p.)  
+Understanding the characteristics of Tree hollows preferred by the superb parrot and what characteristics can best predict active tree hollows is key to understanding and quantifying conservation efforts required to counter the expected extinction debt that is sure to ensue into the future without the replenishment of new trees. I obtained data based on two main techniques focusing on tree physiognomy to indicate whether the superb parrot has preferences in selecting a nest. The focus on finding these relationships[SS6] will help future citizen science projects and contribute large amounts of replicable data across the Australian woodland landscape. I aim to build upon previous knowledge of () concluding that superb parrots prefer deep hollows and examine whether other tree or hollow characteristics can also be used to predict the presence of nest hollows contributing to tree hollow research. 
+Obtaining climbing data is time consuming, expensive and risky and ground counts are cheap, and often inaccurate, yielding inaccurate or little to no information about the hollow itself. (Harper et al., 2004) using both types of data, I can examine the differences in the two methods as well as comparing the accuracy of the results in predicting hollows. 
+If tree nest hollows can be predicted with tree physiognomy, then the value of certain trees can be placed a higher conservation value.  I will explore the relationship of tree nests and tree hollows compared to tree physiognomy to contribute replicable data to future research, whilst also contributing signature conservational values based on tree physiognomy for future ecological management evaluations. 
+I hypothesis that climbing techniques will be more accurate in predicting tree nests compared to ground-based methods and that there is an ideal DBH range where most active nests can be found. 
+ I hypothesise that there an increased DBH will corelate to the amount of nests present due to the superb parrot.  
+What features of a hollow make it attractive to a superb parrot[SS7]? 
+The diameter of the stem on a hollow is less of an indicator than hollow depth .  
+The questions I will address will be 1: Is climbing data a better method than ground based methods and is there a way to accommodate both?  
+Can Tree DBH predict the presence of nests? Is there a relationship between the DBh of the tree and nest preferences? Trees with a bigger dbh are likely to be older and have more chance of having hollows present with age. The social side of superb parrots would deem this beneficial. 
+
+Methods
+Study area and species 
+The data collected was from North Canberra in two sites, the outskirts of Throsby just outside of mulligans flat reserve -35.172074, 149.165799 and south west of Belconnen -35.241217, 149.004370 where the superb parrot is known to breed in colonies on the outskirts of Canberra. The two study sites are roughly 15km apart on either side of suburban Canberra and can be considered independent of each other with localised climate history and also dependent on preference due to the ability of the superb parrots metapopulation not being limited to the distance between the study sites. 
+The study sites are heavily grazed open woodlands used for mostly cattle. The trees are mostly all aged hollow bearing little to no recruitment of young trees sue to the current land uses. For this study sites measurements were derived by only two tree species, Eucalytpus blakleyi (Blakely's red gum) and Eucalyptus rosii (Scribbly Gum) 
+Data collection 
+There are two main methods of obtaining data associated with measuring hollows. 
+- 1: Climbing tree surveys, as they are detailed and give highly accurate results
+- 2:  ground count surveys, as they are quick and easy to replicate 
+I will be using Hollow level data based on single rope climbing techniques to record, minimum entrance diameter (cm), floor diameter (cm), depth of hollow (cm), diameter of the stem the hollow (cm) and tree species. Ground based methods will record information such as, Tree DBH, Tree health, Number of hollows observed and tree species. Once observed from the ground, a climber will count the unseen hollows so that the methods can be contrasted and differences noted. Trees were only measured if DBH was >50cm was excluded from the data set knowing that there were no hollows below this limit.
+Classification of a nest Nests were classified by having superb parrot eggs and having had signs of superb parrot fledglings. The measurement of the nest occurred after the chicks had fledged to least disturb the species. 
+Random Tree data To avoid pseudoreplication of data, a randomly selected nearby tree was measured for both number of tree hollows and DBH and included in the tree data set. These trees were selected from a distance of 50m away of the nested tree and included in the random tree data. 
+Data analysis 
+- Software used Excel was used in the data analysis to produce an ANOVA and a Regression to summarise the data in the form of box plots and scatterplots. 
+Limiting Error 
+- An inaccurate method may be more efficient if the time- saving allows a sufficiently larger sample size to be taken and if any bias can be corrected. By using technique called double sampling, two values one being accurate time intensive and costly, the other being faster, more cost efficient and less accurate can be corrected. Double sampling involves the distinction between the ratio of time taken for the two methods to a critical ratio relating the strength of the relationship between the two methods. (Gilbert, 1987) This can be determined by calculating a critical ratio, refer to Equation 1. (Gilbert, 1987) 
+- Equation 1: 
+- 
+
+
+
+Question 1: Is climbing hollow counts better than Ground counts and from either method, what best predicts the presence of superb parrot nests?   
+A box plot was created from data obtained from climbing and ground counts measuring the number of hollows observed using the individual methods whether or not a nest was found. Each of these values was assigned to a yes or no value and represented using quartiles, excluding outliers. From each of these methods a yes or no value was then assigned to indicate the detectability of nests.  
+Question 2: Can Tree DBH predict the presence of nests?  
+Tree DBH range from >50cm to the maximum value was used to compare the difference to whether or not it had a nest present or not using a box.
+Question 3: Can hollow depth and the width of the hollow stem predict the presence of a hollow nest. 
+Hollow depth was taken from a sample of 100 trees concluding both tree species of Blakely's red gum and Scribbly Gum including both yes and no values and hollow stem diameter was also included from the same method. regardless of yes or no values. 
+Hollow depth and the width of the hollow stem was compared to nests with the presence of a nest hollow. The presence of a no value was not included. 
+Question 4 Do Superb parrots have a preference of tree species. [SS8]
+All data used is located here 
+
+
+Results 
+
+Methods of climbing and ground count data were used to compare the effectiveness in predicting hollows and[SS9] hollow nests. In this study we measured a total of 100 trees (74 blakelyi) and (26 Rossii) Tree preference for nests was found to be symmetrical and treated as non-discriminatory in the choice of nests. (Figure 4) 
+number of trees and x amount of hollows. There were 25 nest trees and 5g0 random trees.
+
+It also included hollow depth, tree dbh, ground hollows and active nests using tree DBH (diameter at breast height), and diameter of the hollows stem. These continuous data sets were compared against simple categorical yes, no values and plotted using box and whisker plots and scatter plots using either an ANOVA or Regression to evaluate the relationship. 
+
+
+
+
+
+
+
+
+
+
+
+Figure 1 climbing counts shows a higher success of predicting tree nest hollows. Ground counts show a lower success of predicting tree nest hollows[SS10].
+
+Figure 1. Climbing counts vs Ground counts and the success of finding hollows based on each method
+
+
+Tree DBH No nest present or nest present
+
+Figure 2 Tree DBH (diameter at breast height) and presence of a nest or no nest.
+
+
+
+
+presence of active and active nest hollows compared to hollow depth
+
+Figure 3 Depth of hollow and diameter of hollow assigned to the presence of nests or no nests found.
+Distribution of active tree nests and non-active hollows 
+[SS11]
+Figure 4 Species preference between tree species shown as symmetrical
+
+
+
+
+
+
+Discussion - interpretation of results and why I think I got those results
+Question 1: Question 1: Is climbing hollow counts better than Ground counts and from either method, what best predicts the presence of superb parrot nests?  
+Climbing counts show 44% more accurate readings Figure 1.  Cite here () 
+Question 2: Question 2: Can Tree DBH predict the presence of nests? Is there a relationship between the DBh of the tree and nest preferences? Trees with a bigger dbh are likely older and have more chance of having hollows present with age. 
+Question 3: Can the depth of the hollow or the diameter of a stem predict whether or not a nest will be found.   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Conclusion here if not concluded within the discussion located under the question subheadings. 
+A limitation of the data is that AT THE END OF THE DISCUSION. 
+Only 50 trees were measured for DBH/# of hollows counted – only 25 of these had active hollows. Data set is very small.  Needs to be replicated on a larger scale (Larger data set required) for better predictions/outcomes. Using the double sampling technique to become effective. 
+The limitation trees were likely to have a similar growth history. Randomisation was only done as the study site did not have a large selection of trees. The study sites also do not represent the realised niche of the superb parrot but a unique area being the outskirts of Canberra. 
+They can be found all the way down to Victoria. 
+Data set did not contain unique identifiers (Which hollows measured were not correlated to a particular tree measured) in the future geolocation of the trees used can help with the replication of future data sets built from this report and methods used. 
+
+- Write about the figures and the ANOVA, T test 
+Random trees were selected within the same area as nest trees, but we used a DBH minimum of 50 cm as a criterion for tree selection (because our field studies showed that superb parrots do not nest in trees with DBH < 50 cm). (Stojanovic et al., 2021) 
+Discussion: Start by answering the questions you outlined at the end of the intro. Interpret you results, and identify their limitations. Each successive paragraph expands the focus, until last paragraph relates back to the first para of the intro and places[SS12] your work in context of the broader literature.  
+Conclusions 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+References. 
+
+
+Gilbert, R.O., 1987. Statistical Methods for Environmental Pollution Monitoring. Van Nostrand Reinhold, New York, 320 pp.
+Goldingay, R. L. (2011) ‘Characteristics of tree hollows used by Australian arboreal and scansorial mammals’, Australian Journal of Zoology, 59(5), pp. 277–294. doi: 10.1071/ZO11081.
+Harper, M. J. et al. (2004) ‘Overcoming bias in ground-based surveys of hollow-bearing trees using double-sampling’, Forest Ecology and Management, 190(2–3), pp. 291–300. doi: 10.1016/j.foreco.2003.10.022.
+Lindenmayer, D. B. et al. (2011) ‘Cross-sectional vs . longitudinal research?: a case study of trees with hollows and marsupials in Australian forests Published by?: Ecological Society of America Stable URL?: http://www.jstor.org/stable/23208474 REFERENCES Linked references are available’, Ecological Monographs, 81(4), pp. 557–580.
+Linde[SS13]nmayer, D. B., and Franklin, J. F. (Eds) (2003). ‘Towards Forest Sustainability.’ (CSIRO Publishing: Melbourne.)
+Manning, A. D. et al. (2013) ‘Hollow futures? Tree decline, lag effects and hollow-dependent species’, Animal Conservation, 16(4), pp. 395–403. doi: 10.1111/acv.12006.
+Le Roux, D. S. et al. (2014) ‘The future of large old trees in urban landscapes’, PLoS ONE, 9(6). doi: 10.1371/journal.pone.0099403.
+Stojanovic, D. et al. (2021) ‘Suitable nesting sites for specialized cavity dependent wildlife are rare in woodlands’, Forest Ecology and Management, 483(August), p. 118718. doi: 10.1016/j.foreco.2020.118718.
+
+[SS1]Check if this is the order of the intro > aims Methods> results >implications of results. 
+[SS2]Insert data upon findings
+[SS3]Rewrite based on flow of report after its finished 
+[SS4]Rewrite so it makes sense 
+* [SS5]Start with the broad concepts (e.g. a paragraph on the importance of habitat complexity and why it is important for biodiversity generally). Then focus on your topic (e.g., what is known about the importance of habitat complexity for birds). 
+* A focused literature review providing background to the issue you are researching or the relevant theory you are testing. 
+
+* Identify why your research is important. Is there a gap in our knowledge that your research seeks to fill or a particular conservation issue that you are seeking to inform?  
+* State your aim, research question (or questions) and/or hypotheses. 
+
+[SS6]End of introduction
+[SS7]Put hypotheses here.but im not sure how to write it
+[SS8]Do I delete because my word count is 700 over including ref.
+[SS9]Type out the overall results of the data collection in terms of how many trees were sampled, how many nests were found, how many hollows and the number of trees measured less than 110cm cm DBH 
+[SS10]Include a caption like this above all figures
+[SS11]Do I need this or can it just be written as a sentence in conclusions
+[SS12]Check to see if your first paragraph is an opening one 
+[SS13]Put in alphabetical order make sure the references are correctly displayed
